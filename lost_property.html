@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="weui.css" />
     <script src="weui.min.js"></script>
     <script src="jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5F1YoiVMkVZxB0PkegE8vb60Hl0rPIzc"></script>
     <title>失物招领处</title>
     <style type="text/css">
     .html .body {
@@ -31,29 +30,72 @@
         font-size: 11px;
         color: #666666
     }
+    
+    .placepicker:after {
+        content: "";
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        border-width: 0 2px 2px 0;
+        border-color: #C8C8CD;
+        border-style: solid;
+        -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        position: relative;
+        top: -2px;
+        position: absolute;
+        top: 50%;
+        left: 86px;
+        margin-top: -4px;
+    }
+    
+    .tagpicker:after {
+        content: "";
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        border-width: 0 2px 2px 0;
+        border-color: #C8C8CD;
+        border-style: solid;
+        -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+        position: relative;
+        top: -2px;
+        position: absolute;
+        top: 50%;
+        left: 177px;
+        margin-top: -4px;
+    }
     </style>
 </head>
 
 <body style="background-color:#f9f9f9">
     <div class="navbar" style="background-color: white">
-        <div class="weui-cell weui-cell_select">
-            <select class="weui-select" name="place" style="font-size:13px;width:25%">
-                <option value="0"></option>
-                <option value="1">紫荆园</option>
-                <option value="2">桃李园</option>
-                <option value="3">六教</option>
-            </select>
-            <select class="weui-select" name="tag" style="font-size:13px;width:25%">
-                <option value="0"></option>
-                <option value="1">生活用品</option>
-                <option value="2">学生卡</option>
-                <option value="3">钥匙</option>
-            </select>
-            <div class="weui-cell__bd" style="font-size:13px;width:25%">
-                <input class="weui-input" type="date" value="" placeholder="">
+        <div class="weui-cell" style="font-size:12px">
+            <div class="placepicker" style="width:35%; padding:0 15px 0 10px; border-radius: 8px;border:1px solid #9e9e9e">
+                <select class="weui-select" name="place" style="height:30px; line-height:30px;padding:0">
+                    <option value="0">选择地点</option>
+                    <option value="1">紫荆园</option>
+                    <option value="2">桃李园</option>
+                    <option value="3">六教</option>
+                </select>
             </div>
-            <div class="weui-cell__bd" style="font-size:13px;width:25%">
-                <input class="weui-input" type="date" value="" placeholder="">
+            <div class="tagpicker" style="width:35%; padding:0 15px 0 10px; border-radius: 8px;border:1px solid #9e9e9e; margin-left:5px">
+                <select class="weui-select" name="tag" style="height:30px; line-height:30px;padding:0">
+                    <option value="0">选择分类</option>
+                    <option value="1">生活用品</option>
+                    <option value="2">学生卡</option>
+                    <option value="3">钥匙</option>
+                </select>
+            </div>
+            <div class="datepicker" style="width:auto; margin-left:10px">
+                <div class="weui-cell__bd" style="">
+                    <input class="weui-input" type="date" value="2016-12-10" placeholder="">
+                </div>
+                <hr />
+                <div class="weui-cell__bd" style="">
+                    <input class="weui-input" type="date" value="2016-12-29" placeholder="">
+                </div>
             </div>
         </div>
     </div>
@@ -61,28 +103,28 @@
         <div class="item">
             <img src="1.JPG" style="width:100%">
             <div class="item_detail" style="background-color:white; padding:8px">
-                <p>北馆 <img src="location2.png" style="vertical-align:top"> 钥匙 <img src="tag.png" style="width:9%; vertical-align:top"></p>
+                <p><img src="location.png" style="width:9px; vertical-align:middle"> 北馆 <img src="tag.png" style="width:10px; vertical-align:middle"> 钥匙</p>
                 <p>2016-12-10</p>
             </div>
         </div>
         <div class="item">
             <img src="2.JPG" style="width:100%">
             <div class="item_detail" style="background-color:white; padding:8px">
-                <p>北馆 <img src="location2.png" style="vertical-align:top"> 钥匙 <img src="tag.png" style="width:9%; vertical-align:top"></p>
+                <p><img src="location.png" style="width:9px; vertical-align:middle"> 北馆 <img src="tag.png" style="width:10px; vertical-align:middle"> 钥匙</p>
                 <p>2016-12-10</p>
             </div>
         </div>
         <div class="item">
             <img src="2.JPG" style="width:100%">
             <div class="item_detail" style="background-color:white; padding:8px">
-                <p>北馆 <img src="location2.png" style="vertical-align:top"> 钥匙 <img src="tag.png" style="width:9%; vertical-align:top"></p>
+                <p><img src="location.png" style="width:9px; vertical-align:middle"> 北馆 <img src="tag.png" style="width:10px; vertical-align:middle"> 钥匙</p>
                 <p>2016-12-10</p>
             </div>
         </div>
         <div class="item">
             <img src="1.JPG" style="width:100%">
             <div class="item_detail" style="background-color:white; padding:8px">
-                <p>北馆 <img src="location2.png" style="vertical-align:top"> 钥匙 <img src="tag.png" style="width:9%; vertical-align:top"></p>
+                <p><img src="location.png" style="width:9px; vertical-align:middle"> 北馆 <img src="tag.png" style="width:10px; vertical-align:middle"> 钥匙</p>
                 <p>2016-12-10</p>
             </div>
         </div>
